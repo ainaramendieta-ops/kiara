@@ -3,30 +3,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberQuest: Neo-Runner</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div id="game-container">
+    <main id="game-container">
+
+        <h1>CYBERQUEST</h1>
+        <h2>NEO-RUNNER</h2>
 
         <div id="hud">
             <span id="score">PUNTOS: 0</span>
             <span id="lives">VIDAS: 3</span>
+            <button id="restart">REINICIAR</button>
         </div>
 
-        <div id="stage">
-            <div id="player"></div>
-            <div id="obstacle"></div>
-            <div id="coin"></div>
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+
+        <div id="controls">
+            <p>← → Mover</p>
+            <p>↑ Girar</p>
+            <p>↓ Bajar</p>
+            <p>ESPACIO: Caída rápida</p>
         </div>
 
-    </div>
+    </main>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
