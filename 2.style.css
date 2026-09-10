@@ -1,0 +1,27 @@
+body {
+  background-color: #0d0d0d; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.hud {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ff6b35; /* Color del puntaje (Naranja) */
+}
+
+canvas {
+  background-color: #1a1a2e;
+  border: 4px solid #ff6b35; /* Borde del tablero */
+  display: block;
+  margin: 0 auto;
+}
