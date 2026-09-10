@@ -1,27 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-  background-color: #0d0d0d; /* Fondo oscuro */
-  color: #ffffff; /* Texto blanco */
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at center, #15152d 0%, #050509 70%);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.game-container {
-  text-align: center;
+#game-container {
+    width: 360px;
+    text-align: center;
+    padding: 20px;
 }
 
-.hud {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #ff6b35; /* Color del puntaje (Naranja) */
+h1 {
+    margin: 0;
+    color: #00ffff;
+    font-size: 32px;
+    letter-spacing: 5px;
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 15px #00ffff;
 }
 
-canvas {
-  background-color: #1a1a2e;
-  border: 4px solid #ff6b35; /* Borde del tablero */
-  display: block;
-  margin: 0 auto;
+h2 {
+    margin: 5px 0 15px;
+    color: #ff3cac;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #ff3cac;
+}
+
+#hud {
+    width: 300px;
+    margin: 0 auto 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #00ffff;
+}
+
+#restart {
+    padding: 6px 10px;
+
+    background: #ff3cac;
+    color: white;
+
+    border: 1px solid #ff8ad8;
+    border-radius: 4px;
+
+    cursor: pointer;
+    font-weight: bold;
+
+    box-shadow: 0 0 8px #ff3cac;
+}
+
+#restart:hover {
+    background: #ff5fbd;
+}
+
+#gameCanvas {
+    display: block;
+
+    width: 300px;
+    height: 600px;
+
+    margin: 0 auto;
+
+    background-color: #080817;
+
+    border: 3px solid #00ffff;
+
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+#controls {
+    margin-top: 15px;
+
+    color: #8888aa;
+    font-size: 12px;
+}
+
+#controls p {
+    margin: 4px;
+}
+
+@media (max-height: 750px) {
+    body {
+        align-items: flex-start;
+        padding-top: 10px;
+    }
+
+    #game-container {
+        transform: scale(0.85);
+        transform-origin: top center;
+    }
 }
